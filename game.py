@@ -34,7 +34,7 @@ node_tree = defaultdict(dict)
 visited_boards = set()
 
 
-def play(board: Board, solution_tree_node: dict, last_move: Optional[Move] = None):
+def play(board: Board, solution_tree_node: dict):
 
     board_state = board.as_hashable
 
@@ -57,7 +57,7 @@ def play(board: Board, solution_tree_node: dict, last_move: Optional[Move] = Non
             solution_tree_node[move] = True
             raise RuntimeError('Done')
 
-        play(new_board, solution_tree_node[move], move)
+        play(new_board, solution_tree_node[move])
 
 try:
     play(board, node_tree)

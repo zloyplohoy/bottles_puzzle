@@ -55,13 +55,13 @@ def play(board: Board, solution_tree_node: dict):
 
         if new_board.is_complete:
             solution_tree_node[move] = True
-            raise RuntimeError('Done')
+            raise StopIteration('Solution found')
 
         play(new_board, solution_tree_node[move])
 
 try:
     play(board, node_tree)
-except Exception:
+except StopIteration:
     print('Done')
 
 def find_winning_path(solution_tree_node: dict) -> Optional[list[Move]]:

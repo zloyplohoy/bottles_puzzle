@@ -1,0 +1,3 @@
+[tool.pylint]
+disable = ["missing-docstring"]
+ignore = ["venv"]

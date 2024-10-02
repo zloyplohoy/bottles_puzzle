@@ -1,8 +1,10 @@
+from collections import defaultdict
+from copy import deepcopy
+from typing import Optional
 from entities import Bottle, Board, Color as c, Move
 from actions import pour, get_all_moves
-from copy import deepcopy
-from typing import Optional, Any
-from collections import defaultdict
+
+
 
 
 bottle_colors = [

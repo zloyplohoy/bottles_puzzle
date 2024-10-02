@@ -48,9 +48,6 @@ def play(board: Board, solution_tree_node: dict, last_move: Optional[Move] = Non
 
 
     for move in moves:
-        # Skip back-and-forths
-        if last_move and set(move) == set(last_move):
-            continue
 
         new_board = deepcopy(board)
         pour(new_board[move.source], new_board[move.target])

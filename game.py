@@ -1,5 +1,4 @@
 from entities import Bottle, Board, Color as c, Move
-from pprint import pprint
 from actions import pour, get_all_moves
 from copy import deepcopy
 from typing import Optional, Any
@@ -43,8 +42,6 @@ def play(board: Board, solution_tree_node: dict, last_move: Optional[Move] = Non
     visited_boards.add(board_state)
 
     moves = get_all_moves(board)
-    # pprint(board)
-    pprint(moves)
 
 
     for move in moves:
@@ -93,6 +90,3 @@ if winning_path:
 
 else:
     print("No winning path found.")
-
-
-# pprint(board)

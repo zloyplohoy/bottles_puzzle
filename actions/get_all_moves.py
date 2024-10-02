@@ -1,4 +1,4 @@
-from entities import Board, Bottle, Move
+from entities import Board, Move
 from .pour import pour
 
 def get_all_moves(board: Board) -> list[Move]:
